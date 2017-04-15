@@ -14,10 +14,10 @@ $('document').ready(function () {
           let response = JSON.parse(xhr.responseText);
           let results = response.albums.items;
           for (let i = 0; i < results.length; ++i) {
-            let albumImage = results[i].images[0].url;
-            let albumName = results[i].name;
-            let albumURL = results[i].external_urls.spotify;
             let albumArtist = results[i].artists[0].name;
+            let albumName = results[i].name;
+            let albumImage = results[i].images[0].url;
+            let albumURL = results[i].external_urls.spotify;
             let responseHTML = `<div class="col">`;
             let link = `<a href="` +albumImage+ `" data-lightbox="gallery" data-title="` +albumName+ `">`;
             responseHTML += link;
