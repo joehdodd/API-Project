@@ -31,7 +31,7 @@ $('document').ready(function () {
         }
       }
     };
-    let searchQuery = '?q='+searchText.value+'&type=album&limit=12';
+    let searchQuery = '?q='+searchText.value+'&type=album&limit=8';
     xhr.open('GET', 'https://api.spotify.com/v1/search'+searchQuery);
     xhr.send();
   }); // end submit
