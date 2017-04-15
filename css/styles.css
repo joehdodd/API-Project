@@ -56,22 +56,18 @@ input[name="submit"] {
 }
 
 /* =======================
-         Container
+      Containers/Flex
    ======================= */
 
 .container {
+    display: flex;
+    flex-wrap: wrap;
     margin: 0 auto;
     width: 90%;
 }
 
-/* =======================
-         Clearfix
-   ======================= */
-
-.clearfix::after {
-    content: " ";
-    display: table;
-    clear: both;
+.flex {
+  flex: 1 0 150px;
 }
 
 /* =======================
@@ -85,14 +81,6 @@ input[name="submit"] {
         margin-left: 25%;
     }
 
-    .col {
-        float: left;
-        width: 50%;
-        padding-left: 1em;
-        padding-right: 1em;
-        margin-bottom: 1em;
-    }
-
     .gallery {
         background-color: #f2f2f2;
         border-radius: 5px;
@@ -102,24 +90,4 @@ input[name="submit"] {
         margin-bottom: 20px;
     }
 
-    /*.lb-nav a.lb-next,
-    .lb-nav a.lb-prev{
-        opacity: 1;
-    }*/
-}
-
-@media screen and (min-width: 768px) {
-
-    .col {
-        float: left;
-        width: 33.3333%;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-
-    .col {
-        float: left;
-        width: 25%;
-    }
 }
