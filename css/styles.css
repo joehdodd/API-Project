@@ -1,0 +1,125 @@
+/* =======================
+       Overall Styles
+   ======================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 20px;
+}
+
+/* =======================
+       Layout Styles
+   ======================= */
+
+img {
+    width: 100%;
+}
+
+input[name="search"],
+input[name="submit"] {
+  margin: 20px auto;
+  height: 50px;
+  outline: none;
+  font-size: 1em;
+  border-radius: 5px;
+  border-width: 0;
+  padding-left: .5em;
+}
+
+input[name="search"] {
+  background-color: #f2f2f2;
+}
+
+input[name="submit"] {
+  width: 100px;
+  color: #f2f2f2;
+  background-color: #34ad58;
+}
+
+/* =======================
+      Lightbox Styles
+   ======================= */
+
+.lb-outerContainer, .lightboxOverlay, .lightbox .lb-image {
+    border-radius: 0;
+    border: none;
+}
+
+.lightboxOverlay {
+    width: 100vh;
+    height: 100vh;
+    display: block;
+    border: none;
+}
+
+/* =======================
+         Container
+   ======================= */
+
+.container {
+    margin: 0 auto;
+    width: 90%;
+}
+
+/* =======================
+         Clearfix
+   ======================= */
+
+.clearfix::after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+/* =======================
+        Media Queries
+   ======================= */
+
+@media screen and (min-width: 480px) {
+
+    input[name="search"] {
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    .col {
+        float: left;
+        width: 50%;
+        padding-left: 1em;
+        padding-right: 1em;
+        margin-bottom: 1em;
+    }
+
+    .gallery {
+        background-color: #f2f2f2;
+        border-radius: 5px;
+        padding: 1em;
+        padding-top: 32px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    /*.lb-nav a.lb-next,
+    .lb-nav a.lb-prev{
+        opacity: 1;
+    }*/
+}
+
+@media screen and (min-width: 768px) {
+
+    .col {
+        float: left;
+        width: 33.3333%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .col {
+        float: left;
+        width: 25%;
+    }
+}
