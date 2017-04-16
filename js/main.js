@@ -18,11 +18,12 @@ $('document').ready(function () {
               let albumArtist = results[i].artists[0].name;
               let resultsName = results[i].name;
               let resultsImage = results[i].images[0].url;
+              let albumURL = results[i].external_urls.spotify;
               responseHTML += `<div class="flex">
-                                 <a href="` +resultsImage+ `" data-lightbox="gallery" data-title="Artist: `+albumArtist+`<br><br> Album: `+resultsName+`">
+                                 <a href="` +resultsImage+ `" data-lightbox="gallery" data-title="Artist: `+albumArtist+`<br><br> Album: `+resultsName+`<br><br>`+albumURL+`">
                                  <img class="gallery-item" src="` +resultsImage+ `" title="` +resultsName+ `"></a>
                                </div>`;
-            }
+              }
             responseHTML += `</div>`;
             searchCon.innerHTML = responseHTML;
             console.log(response);

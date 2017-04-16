@@ -85,7 +85,7 @@ input[name="submit"]:hover {
 }
 
 .lb-dataContainer {
-  height: 75px;
+  height: 100px;
   background: rgba(0,0,0,.5);
 }
 
