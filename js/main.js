@@ -3,6 +3,7 @@ $('document').ready(function () {
   const form = document.getElementById('searchForm');
   const searchCon = document.getElementById('searchContainer');
   const searchText = document.getElementById('searchField');
+  const err = document.getElementById('error');
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -12,22 +13,27 @@ $('document').ready(function () {
         if (xhr.status === 200) {
           let response = JSON.parse(xhr.responseText);
           let results = response.albums.items;
-          let responseHTML = `<div class="container">`
-          for (let i = 0; i < results.length; ++i) {
-            let albumName = results[i].name;
-            let albumImage = results[i].images[0].url;
-            responseHTML += `<div class="flex">
-                               <a href="` +albumImage+ `" data-lightbox="gallery" data-title="` +albumName+ `">
-                               <img class="gallery-item" src="` +albumImage+ `" title="` +albumName+ `"></a>
-                             </div>`;
-          }
-          responseHTML += `</div>`
-          searchCon.innerHTML = responseHTML;
-          console.log(response);
+            if (searchText.value = "") {
+              err.style.display = "block";
+            } else {
+              err.style.display = "none";
+              let responseHTML = `<div class="container">`;
+              for (let i = 0; i < results.length; ++i) {
+                let albumName = results[i].name;
+                let albumImage = results[i].images[0].url;
+                responseHTML += `<div class="flex">
+                                   <a href="` +albumImage+ `" data-lightbox="gallery" data-title="` +albumName+ `">
+                                   <img class="gallery-item" src="` +albumImage+ `" title="` +albumName+ `"></a>
+                                 </div>`;
+              }
+              responseHTML += `</div>`;
+              searchCon.innerHTML = responseHTML;
+              console.log(response);
+            }
         }
       }
     };
-    let searchQuery = '?q='+searchText.value+'&type=album&limit=8';
+    let searchQuery = '?q='+searchText.value+'&type=album&limit=18';
     xhr.open('GET', 'https://api.spotify.com/v1/search'+searchQuery);
     xhr.send();
   }); // end submit
