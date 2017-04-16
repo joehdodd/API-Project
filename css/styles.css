@@ -17,7 +17,7 @@ body {
    ======================= */
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
 input[name="search"],
@@ -63,7 +63,7 @@ input[name="submit"] {
 input[name="submit"]:hover {
   color: #f2f2f2;
   background-color: #34ad58;
-  transform: scale(1.05);
+  transform: scale(1.025);
 }
 
 /* =======================
@@ -121,6 +121,14 @@ input[name="submit"]:hover {
     padding: 1em;
     margin: 0 auto;
     width: 90%;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+  .gallery {
+    width: 75%;
   }
 
 }

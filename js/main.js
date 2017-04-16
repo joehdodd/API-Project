@@ -19,11 +19,11 @@ $('document').ready(function () {
               err.style.display = "none";
               let responseHTML = `<div class="container">`;
               for (let i = 0; i < results.length; ++i) {
-                let albumName = results[i].name;
-                let albumImage = results[i].images[0].url;
+                let resultsName = results[i].name;
+                let resultsImage = results[i].images[0].url;
                 responseHTML += `<div class="flex">
-                                   <a href="` +albumImage+ `" data-lightbox="gallery" data-title="` +albumName+ `">
-                                   <img class="gallery-item" src="` +albumImage+ `" title="` +albumName+ `"></a>
+                                   <a href="` +resultsImage+ `" data-lightbox="gallery" data-title="` +resultsName+ `">
+                                   <img class="gallery-item" src="` +resultsImage+ `" title="` +resultsName+ `"></a>
                                  </div>`;
               }
               responseHTML += `</div>`;
