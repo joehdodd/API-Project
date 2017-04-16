@@ -4,10 +4,12 @@
 
 * {
   box-sizing: border-box;
+
 }
 
 body {
   padding-top: 20px;
+  font-family: 'Inconsolata', monospace;
 }
 
 /* =======================
@@ -20,6 +22,7 @@ img {
 
 input[name="search"],
 input[name="submit"] {
+  font-family: 'Inconsolata', monospace;
   margin: 20px 5px;
   height: 50px;
   outline: none;
