@@ -1,9 +1,9 @@
 lightbox.option({
 
-    'maxWidth': 800,
+    'maxWidth': 600,
     'alwaysShowNavOnTouchDevices': false,
     'wrapAround': true,
     'showImageNumberLabel': false,
-    'positionFromTop': 125
+    'positionFromTop': 75
 
 });

@@ -12,7 +12,7 @@ $('document').ready(function () {
         if (xhr.status === 200) {
           let response = JSON.parse(xhr.responseText);
           let results = response.albums.items;
-          let responseHTML = `<div id="searchContainer" class="container gallery">`
+          let responseHTML = `<div class="container">`
           for (let i = 0; i < results.length; ++i) {
             let albumName = results[i].name;
             let albumImage = results[i].images[0].url;

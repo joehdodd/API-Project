@@ -3,11 +3,11 @@
    ======================= */
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 
 /* =======================
@@ -20,7 +20,7 @@ img {
 
 input[name="search"],
 input[name="submit"] {
-  margin: 20px auto;
+  margin: 20px 5px;
   height: 50px;
   outline: none;
   font-size: 1em;
@@ -31,43 +31,60 @@ input[name="submit"] {
 
 input[name="search"] {
   background-color: #f2f2f2;
+  highlight: none;
 }
 
 input[name="submit"] {
-  width: 100px;
+  width: 125px;
+  color: #34ad58;
+  border: 2px solid #34ad58;
+  background: #fff;
+  transition: transform .5s;
+}
+
+input[name="submit"]:hover {
   color: #f2f2f2;
   background-color: #34ad58;
+  transform: scale(1.05);
 }
 
 /* =======================
       Lightbox Styles
    ======================= */
 
-.lb-outerContainer, .lightboxOverlay, .lightbox .lb-image {
-    border-radius: 0;
-    border: none;
+.lb-outerContainer,
+.lightboxOverlay,
+.lightbox .lb-image {
+  border-radius: 0;
+  border: none;
 }
 
 .lightboxOverlay {
-    width: 100vh;
-    height: 100vh;
-    display: block;
-    border: none;
+  width: 100vh;
+  height: 100vh;
+  display: block;
+  border: none;
 }
 
 /* =======================
       Containers/Flex
    ======================= */
 
+.searchArea {
+  display: flex;
+  justify-content: center;
+}
+
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 90%;
 }
 
 .flex {
-  flex: 1 0 150px;
+  flex: 1 0 175px;
+  margin: 10px;
 }
 
 /* =======================
@@ -76,18 +93,16 @@ input[name="submit"] {
 
 @media screen and (min-width: 480px) {
 
-    input[name="search"] {
-        width: 50%;
-        margin-left: 25%;
-    }
+  input[name="search"] {
+    width: 300px;
+  }
 
-    .gallery {
-        background-color: #f2f2f2;
-        border-radius: 5px;
-        padding: 1em;
-        padding-top: 32px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
+  .gallery {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 1em;
+    margin: 0 auto;
+    width: 90%;
+  }
 
 }
