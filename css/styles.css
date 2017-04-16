@@ -84,6 +84,11 @@ input[name="submit"]:hover {
   border: none;
 }
 
+.lb-dataContainer {
+  height: 75px;
+  background: rgba(0,0,0,.5);
+}
+
 /* =======================
       Containers/Flex
    ======================= */
