@@ -22,7 +22,7 @@ $('document').ready(function () {
               responseHTML += `<div class="flex">
                                  <a href="` +resultsImage+ `" data-lightbox="gallery" data-title="Artist: `+albumArtist+`<br><br> Album: `+resultsName+`<br><br>">
                                  <img class="gallery-item" src="` +resultsImage+ `" title="` +resultsName+ `"></a>
-                                 <a href="`+albumURL+`" target="_blank">On Spotify</a>
+                                 <a class="spotLink" href="`+albumURL+`" target="_blank">On Spotify</a>
                                </div>`;
               }
             responseHTML += `</div>`;
