@@ -20,8 +20,9 @@ $('document').ready(function () {
               let resultsImage = results[i].images[0].url;
               let albumURL = results[i].external_urls.spotify;
               responseHTML += `<div class="flex">
-                                 <a href="` +resultsImage+ `" data-lightbox="gallery" data-title="Artist: `+albumArtist+`<br><br> Album: `+resultsName+`<br><br>`+albumURL+`">
+                                 <a href="` +resultsImage+ `" data-lightbox="gallery" data-title="Artist: `+albumArtist+`<br><br> Album: `+resultsName+`<br><br>">
                                  <img class="gallery-item" src="` +resultsImage+ `" title="` +resultsName+ `"></a>
+                                 <a href="`+albumURL+`" target="_blank">On Spotify</a>
                                </div>`;
               }
             responseHTML += `</div>`;
