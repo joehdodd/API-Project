@@ -13,23 +13,21 @@ $('document').ready(function () {
         if (xhr.status === 200) {
           let response = JSON.parse(xhr.responseText);
           let results = response.albums.items;
-            if (searchText.value = "") {
-              err.style.display = "block";
-            } else {
-              err.style.display = "none";
-              let responseHTML = `<div class="container">`;
-              for (let i = 0; i < results.length; ++i) {
-                let resultsName = results[i].name;
-                let resultsImage = results[i].images[0].url;
-                responseHTML += `<div class="flex">
-                                   <a href="` +resultsImage+ `" data-lightbox="gallery" data-title="` +resultsName+ `">
-                                   <img class="gallery-item" src="` +resultsImage+ `" title="` +resultsName+ `"></a>
-                                 </div>`;
+            let responseHTML = `<div class="container">`;
+            for (let i = 0; i < results.length; ++i) {
+              let albumArtist = results[i].artists[0].name;
+              let resultsName = results[i].name;
+              let resultsImage = results[i].images[0].url;
+              let albumURL = results[i].external_urls.spotify;
+              responseHTML += `<div class="flex">
+                                 <a href="` +resultsImage+ `" data-lightbox="gallery" data-title="Artist: `+albumArtist+`<br><br> Album: `+resultsName+`<br><br>">
+                                 <img class="gallery-item" src="` +resultsImage+ `" title="` +resultsName+ `"></a>
+                                 <a href="`+albumURL+`" target="_blank">On Spotify</a>
+                               </div>`;
               }
-              responseHTML += `</div>`;
-              searchCon.innerHTML = responseHTML;
-              console.log(response);
-            }
+            responseHTML += `</div>`;
+            searchCon.innerHTML = responseHTML;
+            console.log(response);
         }
       }
     };

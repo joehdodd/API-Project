@@ -12,6 +12,16 @@ body {
   font-family: 'Inconsolata', monospace;
 }
 
+a {
+  text-decoration: none;
+  color: #444;
+}
+
+a:hover {
+  color: #34ad58;
+  font-weight: bolder;
+}
+
 /* =======================
        Layout Styles
    ======================= */
@@ -84,6 +94,11 @@ input[name="submit"]:hover {
   border: none;
 }
 
+.lb-dataContainer {
+  height: 100px;
+  background: rgba(0,0,0,.5);
+}
+
 /* =======================
       Containers/Flex
    ======================= */
@@ -103,6 +118,7 @@ input[name="submit"]:hover {
 .flex {
   flex: 1 0 175px;
   margin: 10px;
+  text-align: center;
 }
 
 /* =======================
