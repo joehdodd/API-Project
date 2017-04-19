@@ -48,7 +48,6 @@ input[name="search"] {
 }
 
 input[name="submit"] {
-  width: 125px;
   color: #34ad58;
   border: 2px solid #34ad58;
   background: #fff;
