@@ -30,7 +30,7 @@ $('document').ready(function () {
       }
     };
     let searchQuery = '?q='+searchText.value+'&api_key=dc6zaTOxFJmzC&limit=16';
-    xhr.open('GET', 'http://api.giphy.com/v1/gifs/search'+searchQuery);
+    xhr.open('GET', 'https://api.giphy.com/v1/gifs/search'+searchQuery);
     xhr.send();
   }); // end submit
 }); // end ready
