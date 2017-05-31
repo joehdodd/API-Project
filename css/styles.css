@@ -48,7 +48,10 @@ input[name="search"] {
 }
 
 input[name="submit"] {
+<<<<<<< HEAD
   width: 100px;
+=======
+>>>>>>> origin/master
   color: #34ad58;
   border: 2px solid #34ad58;
   background: #fff;
@@ -84,11 +87,6 @@ input[name="submit"]:hover {
   display: block;
   border: none;
 }
-
-/*.lb-dataContainer {
-  height: 100px;
-  background: rgba(0,0,0,.5);
-}*/
 
 /* =======================
       Containers/Flex
