@@ -12,17 +12,15 @@ $('document').ready(function () {
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
           let response = JSON.parse(xhr.responseText);
-          let results = response.albums.items;
+          let results = response.data;
             let responseHTML = `<div class="container">`;
             for (let i = 0; i < results.length; ++i) {
-              let albumArtist = results[i].artists[0].name;
-              let resultsName = results[i].name;
-              let resultsImage = results[i].images[0].url;
-              let albumURL = results[i].external_urls.spotify;
+              let resultsImage = results[i].images.fixed_width.url;
+              let lightbboxImage = results[i].images.original.url;
+              let gifURL = results[i].url;
               responseHTML += `<div class="flex">
-                                 <a href="` +resultsImage+ `" data-lightbox="gallery" data-title="Artist: `+albumArtist+`<br><br> Album: `+resultsName+`<br><br>">
-                                 <img class="gallery-item" src="` +resultsImage+ `" title="` +resultsName+ `"></a>
-                                 <a class="spotLink" href="`+albumURL+`" target="_blank">On Spotify</a>
+                                 <a href="` +lightbboxImage+ `" data-lightbox="gallery"><img class="gallery-item" src="` +resultsImage+ `"></a>
+                                 <a class="spotLink" href="`+ gifURL+`" target="_blank">On Giphy</a>
                                </div>`;
               }
             responseHTML += `</div>`;
@@ -31,8 +29,8 @@ $('document').ready(function () {
         }
       }
     };
-    let searchQuery = '?q='+searchText.value+'&type=album&limit=18';
-    xhr.open('GET', 'https://api.spotify.com/v1/search'+searchQuery);
+    let searchQuery = '?q='+searchText.value+'&api_key=dc6zaTOxFJmzC&limit=16';
+    xhr.open('GET', 'http://api.giphy.com/v1/gifs/search'+searchQuery);
     xhr.send();
   }); // end submit
 }); // end ready

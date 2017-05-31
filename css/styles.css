@@ -33,22 +33,22 @@ img {
 input[name="search"],
 input[name="submit"] {
   font-family: 'Inconsolata', monospace;
-  margin: 20px 5px;
+  margin: 20px 2.5px;
   height: 50px;
   outline: none;
   font-size: 1.15em;
   border-radius: 5px;
   border-width: 0;
-  padding-left: .5em;
+  padding-left: .15em;
 }
 
 input[name="search"] {
   background-color: #f2f2f2;
-  position: relative;
+  width: 155px;
 }
 
 input[name="submit"] {
-  width: 125px;
+  width: 100px;
   color: #34ad58;
   border: 2px solid #34ad58;
   background: #fff;
@@ -85,10 +85,10 @@ input[name="submit"]:hover {
   border: none;
 }
 
-.lb-dataContainer {
+/*.lb-dataContainer {
   height: 100px;
   background: rgba(0,0,0,.5);
-}
+}*/
 
 /* =======================
       Containers/Flex
@@ -122,6 +122,10 @@ input[name="submit"]:hover {
     width: 300px;
   }
 
+  input[name="submit"] {
+    width: 150px;
+  }
+
   .gallery {
     background-color: #f2f2f2;
     border-radius: 5px;
@@ -133,6 +137,7 @@ input[name="submit"]:hover {
   .spotLink {
     font-size: 1.15em;
   }
+
 }
 
 @media screen and (min-width: 1024px) {
